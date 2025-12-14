@@ -1,5 +1,7 @@
-import { ReactNode } from "react"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+"use client"
+
+import { ReactNode, useEffect } from "react"
+import { usePageHeader } from "@/components/layout/page-header-context"
 
 interface PageContainerProps {
   title: string
@@ -8,14 +10,14 @@ interface PageContainerProps {
 }
 
 export function PageContainer({ title, description, children }: PageContainerProps) {
+  const { setPageHeader } = usePageHeader()
+
+  useEffect(() => {
+    setPageHeader({ title, description })
+  }, [title, description, setPageHeader])
+
   return (
-    <div className="container mx-auto p-4 max-w-6xl">
-      <div className="mb-6">
-        <h1 className="text-3xl font-bold tracking-tight">{title}</h1>
-        {description && (
-          <p className="text-muted-foreground mt-2">{description}</p>
-        )}
-      </div>
+    <div className="flex flex-1 flex-col gap-4">
       {children}
     </div>
   )
