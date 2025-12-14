@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
-import { Navigation } from "@/components/layout/navigation";
+import { AppSidebar } from "@/components/layout/sidebar";
 import { Toaster } from "@/components/ui/toaster";
 
 const inter = Inter({subsets:['latin'],variable:'--font-sans'});
@@ -39,8 +39,9 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <Navigation />
-          {children}
+          <AppSidebar>
+            {children}
+          </AppSidebar>
           <Toaster />
         </ThemeProvider>
       </body>

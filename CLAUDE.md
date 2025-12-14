@@ -1,0 +1,1 @@
+- always use bun instead of npm, yarn or pnpm
