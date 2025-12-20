@@ -2,24 +2,16 @@
 
 import { PageContainer } from "@/components/layout/page-container"
 import { AuthGate } from "@/components/auth/auth-gate"
+import { PromptEnhancer } from "@/components/features/enhance-prompt"
 
 export default function EnhancePromptPage() {
   return (
     <AuthGate>
       <PageContainer
-        title="Enhance Prompt"
-        description="AI-powered prompt enhancement tool"
+        title="AI Prompt Enhancer"
+        description="Transform your prompts into powerful, optimized instructions"
       >
-        <div className="flex flex-1 items-center justify-center">
-          <div className="text-center">
-            <h2 className="text-lg font-medium text-muted-foreground">
-              Coming Soon
-            </h2>
-            <p className="text-sm text-muted-foreground/70 mt-1">
-              This feature is under development.
-            </p>
-          </div>
-        </div>
+        <PromptEnhancer className="h-full" />
       </PageContainer>
     </AuthGate>
   )
