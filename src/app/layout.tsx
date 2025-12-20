@@ -3,6 +3,7 @@ import { Geist, Geist_Mono, Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { AuthProvider } from "@/contexts/auth-context";
+import { AISettingsProvider } from "@/contexts/ai-settings-context";
 import { AppSidebar } from "@/components/layout/sidebar";
 import { Toaster } from "@/components/ui/toaster";
 
@@ -41,9 +42,11 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <AuthProvider>
-            <AppSidebar>
-              {children}
-            </AppSidebar>
+            <AISettingsProvider>
+              <AppSidebar>
+                {children}
+              </AppSidebar>
+            </AISettingsProvider>
           </AuthProvider>
           <Toaster />
         </ThemeProvider>
