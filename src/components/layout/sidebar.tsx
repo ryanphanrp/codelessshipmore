@@ -10,6 +10,7 @@ import {
   IconFileCode,
   IconAdjustments,
   IconSparkles,
+  IconSettings,
   IconLogin,
   IconLogout
 } from "@tabler/icons-react"
@@ -42,6 +43,7 @@ const navigation = [
 
 const protectedNavigation = [
   { name: "Enhance Prompt", href: "/enhance-prompt", icon: IconSparkles },
+  { name: "Settings", href: "/settings", icon: IconSettings },
 ]
 
 export function AppSidebar({ children }: { children: React.ReactNode }) {
