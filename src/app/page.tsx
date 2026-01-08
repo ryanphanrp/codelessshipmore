@@ -38,10 +38,10 @@ export default function HomePage() {
   return (
     <div className="container mx-auto p-6 max-w-6xl">
       <div className="text-center mb-12">
-        <h1 className="text-4xl font-bold tracking-tight mb-4">
+        <h1 className="text-3xl font-bold tracking-tight mb-4">
           CodelessShipMore
         </h1>
-        <p className="text-xl text-muted-foreground mb-8">
+        <p className="text-base text-muted-foreground mb-8">
           A collection of developer utilities for JSON, SQL, Protobuf, and Properties conversion
         </p>
         <div className="flex items-center justify-center gap-4">
@@ -82,7 +82,7 @@ export default function HomePage() {
       </div>
 
       <div className="text-center">
-        <h2 className="text-2xl font-bold mb-4">Features</h2>
+        <h2 className="text-xl font-semibold mb-4">Features</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 text-left">
           <div className="p-4 border rounded-lg">
             <h3 className="font-semibold mb-2">🎨 Modern UI</h3>
